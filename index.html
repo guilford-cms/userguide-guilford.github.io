@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>GUL-16-3330_Userguide_revise</title>
+
+	<meta charset="utf-8"/>
+  <style type="text/css">
+html {
+    /* the line height value of 1.9 is fixed for a line height multiple of 1.4 in the text view */
+    font: normal 106.2%/1.9 serif;
+}
+
+body {
+    font-family: '.SF NS Text', Helvetica, Georgia, serif;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    overflow:hidden;
+    background-color: #f2f2f2;
+    color: #3c3c3c;
+}
+
+/**
+ *
+    Wrappers
+ *
+ */
+
+#wrapper {
+    position: fixed;
+    width: 99.9%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 1.0em;
+}
+
+#wrapper::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+    -webkit-transition: all .45s ease-in;
+    position: relative;
+}
+#wrapper::-webkit-scrollbar-button:start:decrement, #wrapper::-webkit-scrollbar-button:end:increment {
+    height: 0px;
+    display: block;
+    background-color: transparent;
+}
+#wrapper::-webkit-scrollbar-track-piece {
+    background-color:
+    transparent;
+    -webkit-border-radius: 6px;
+}
+#wrapper::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #c8c8c8;
+    -webkit-border-radius: 6px;
+    -webkit-transition: all .45s ease-in;
+}
+
+#content {
+    width: 610px;
+    margin: 0 auto 0 auto;
+    padding: 30px 0 30px 0;
+}
+
+/**
+ *
+    Headings
+ *
+ */
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin: 0.5rem 0;
+}
+
+h1, 
+h2, 
+h3 { margin-bottom: 1rem; }
+
+h1 { font-size: 2.75rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.00rem; }
+h6 { font-size: 0.85rem; }
+
+/**
+ *
+	Paragraphs
+ *
+ */
+
+p {
+	margin: 0 0 1.5em;
+}
+
+/**
+ *
+    Block quotes
+ *
+ */
+
+blockquote {
+    margin: 0 0 1.5em;
+    width: 96%;
+    padding: 0 10px;
+    border-left: 3px solid #ddd;
+    color: #777;
+}
+
+/**
+ *
+	Code Blocks
+ *
+ */
+
+pre code {
+	word-wrap: normal;
+	white-space: pre-wrap;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+}
+
+pre {
+	white-space: pre-wrap;
+    width: 96%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 3px 10px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+code {
+	white-space: nowrap;
+	font-family: monospace;
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+small {
+	font-size: 65%;
+}
+
+/**
+ *
+    Dictionary Definition
+ *
+ */
+
+dt {
+	display: inline;
+    font-weight:bold;
+}
+
+dd {
+	display: block;
+}
+
+/**
+ *
+    Anchors
+ *
+ */
+
+a {
+    color: #308bd8;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ *
+    Horizontal rules
+ *
+ */
+
+hr {
+    width: 100%;
+    margin: 3em auto;
+    border: 0;
+    color: #eee;
+    background-color: #ccc;
+    height: 1px;
+    -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+/**
+ *
+    Lists
+ *
+ */
+
+ol, ul {
+    list-style-position: outside;
+    padding-left: 0;
+    margin-left: 1.5em;
+}
+
+ol li, ul li {
+    text-align: -webkit-match-parent;
+}
+
+li p {
+    margin: 0.5em 0 0.5em;
+}
+
+ol ol, ol ul, ul ul, ul ol {
+    padding-left: 1.5em;
+}
+
+/**
+ *
+    Tables
+ *
+ */
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-spacing: 0;
+}
+
+table th {
+    padding: 3px 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+table tr {
+}
+
+table td {
+    padding: 3px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+/**
+ *
+    Images
+ *
+ */
+
+img {
+    border: none;
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+/**
+ *
+    Marks
+ *
+ */
+
+mark {
+    background: #fefec0;
+    padding:1px 3px;
+}
+
+/**
+ *
+    Footnotes
+ *
+ */
+.footnote {
+    font-size: 0.8rem;
+    vertical-align: super;
+}
+.footnotes ol {
+    font-weight: bold;
+}
+.footnotes ol li {
+    text-align: -webkit-match-parent;
+}
+
+.footnotes ol li p {
+    font-weight: normal;
+}
+
+/**
+ *
+    Figures and Captions
+ *
+ */
+caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+figure {
+    display: block;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+/**
+ *
+    Custom classes
+ *
+ */
+
+.shadow {
+    -webkit-box-shadow: 0 2px 4px #999;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin: -40px auto;
+}
+#wrapper {
+    width: 99.9%;
+}
+#content {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile support */
+@media only screen and (max-device-width:1024px) {
+    html {
+        overflow: auto;
+    }
+
+    #wrapper {
+        overflow: auto;
+        position: relative;
+    }
+}@media print {
+/* Printing support.
+ * Override all printing colors to match the Light theme.
+ */
+img, pre, blockquote, table, figure {
+    page-break-inside: avoid;
+}
+body {
+    background-color:#fff;
+}
+#wrapper {
+    position: static;
+    overflow: hidden;
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+}
+.footnotes {
+    page-break-before: always;
+}
+#content {
+    margin: 0 auto;
+    padding: 0;
+    width: 98%;
+}
+#top-fader, #bottom-fader {
+    display: none;
+}
+hr {
+    color:#ddd;
+    background-color:#ddd;
+    -webkit-box-shadow:0px 1px 0px #ddd;
+}
+pre {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+code {
+    background-color:transparent;
+    border: 1px solid #ddd;
+}
+blockquote {
+    border-left: 3px solid #ddd;
+    color: #000;
+}
+ol {
+    /*
+     * Override the list style when printing to ensure list
+     * markers won't get cut.
+     */
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+}
+table {
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+table th {
+    background-color:transparent;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+table td {
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+mark {
+    background:transparent;
+    color: #000;
+}
+.source {
+    color: #000;
+}
+}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="content">
+<h1>Guilford College Website User Guide</h1>
+
+<hr />
+
+<ul>
+<li><a href="#section-whatisdrupal">What is Drupal? CMS Essentials</a></li>
+<li><a href="#section-components">Components: The Site&#8217;s Visual Building Blocks</a></li>
+<li><a href="#section-imagespecs">Image Specifications</a></li>
+<li><a href="#section-wordcounts">Word Counts</a></li>
+<li><a href="#section-login">Logging Into the Site</a></li>
+<li><a href="#section-createandedit">Creating and Editing Content</a></li>
+<li><a href="#section-pages">Pages</a></li>
+<li><a href="#section-programs">Programs</a></li>
+<li><a href="#section-profile">Your Profile</a></li>
+<li><a href="#section-article">Articles</a></li>
+<li><a href="#section-events">Events</a></li>
+<li><a href="#section-departments">Departments</a></li>
+<li><a href="#section-videosandgalleries">Videos and Galleries</a></li>
+<li><a href="#section-documents">PDFs and Documents</a></li>
+<li><a href="#section-links">Links</a></li>
+<li><a href="#section-contentmaintenance">Content Maintenance</a></li>
+<li><a href="#section-advancedtopics">Advanced Topics</a></li>
+<li><a href="#section-alerts">Alerts</a></li>
+<li><a href="#section-eventregistration">Events with Registration</a></li>
+<li><a href="#section-managingmenus">Managing Menus</a></li>
+<li><a href="#section-reorder">Reordering Menu Items</a></li>
+<li><a href="#section-buildingwebforms">Webforms: Building and Managing</a></li>
+<li><a href="#section-eventmanagement">Event Management</a></li>
+<li><a href="#section-taxonomies">Taxonomies</a></li>
+<li><a href="#section-editorialaccess">Editorial Access and Workflows</a></li>
+<li><a href="#section-rolesandpermissions">Roles and Permissions</a></li>
+<li><a href="#section-metatags">Meta Tags/SEO</a></li>
+<li><a href="#section-managingfiles">Managing Images and Files</a></li>
+<li><a href="#section-glossary">Glossary</a></li>
+</ul>
+
+<hr />
+
+<h2 id="section-whatisdrupal">What is Drupal? CMS Essentials</h2>
+
+<p>Guilford College’s website is built with a content management system – or CMS – called Drupal. A CMS makes it possible for people without technical skills to create and edit pages, news articles, events and other content. If you’ve edited pages on Guilford College’s old site or used blogging platforms like Wordpress, then you’ve used a CMS.</p>
+
+<p>Drupal is an open source product. A strong, dedicated community of developers from around the world contributes the code that makes Drupal run. There’s no cost to use it, and it is the platform of choice for organizations ranging from The Economist to The City of Austin, and Cisco to other colleges and universities. </p>
+
+<hr />
+
+<h3>Key Concepts</h3>
+
+<hr />
+
+<h3>Content Types</h3>
+
+<p>Often, when we’re on websites, everything seems like it’s just a page. But in Drupal, there are many different things that create a site. They’re called “content types.”</p>
+
+<p>Content types are like containers that hold elements together.</p>
+
+<p>For example, the elements of an article include a title, an image, a subtitle and body copy.</p>
+
+<figure>
+<img src="assets/content_type.png" alt="Content Types" />
+<figcaption>Content Types</figcaption>
+</figure>
+
+<p>Guilford College’s site includes custom content types like program created for the College’s academic degrees.</p>
+
+<h5>TIP</h5>
+
+<ul>
+<li>To see all content types that you can create, go to Manage &gt; Content &gt; Add Content</li>
+</ul>
+
+<hr />
+
+<h4>Nodes</h4>
+
+<p>Every piece of content on the site (a page, a video, a program, etc.) is called a node. When you’re editing the site, you’ll see the unique node ID in the browser’s URL bar. Something like this:</p>
+
+<blockquote>
+<p><em>http://guilfordcollege.edu/node/116/edit</em></p>
+</blockquote>
+
+<p>Site visitors never see this unique ID. Instead, they see standard URLs like:</p>
+
+<blockquote>
+<p><em>http://guilfordcollege.edu/how-to-apply</em> </p>
+</blockquote>
+
+<hr />
+
+<h4>Templates</h4>
+
+<p>Templates pull all the elements of a content type into a visual look. They’re what visitors see when they come to the site. Guilford templates are designed to be highly flexible. </p>
+
+<hr />
+
+<h2 id="section-components">Components: The Site&#8217;s Visual Building Blocks</h2>
+
+<p>Components are the visual building blocks of the site’s templates. When you create content (e.g. page, program), you are given a variety of components to use. The available components, and the way you can arrange them, have been carefully thought out to balance flexibility with visual consistency across the site.</p>
+
+<p>Consult the <a href="http://guilford-styleguide.area451.co/">Guilford Website Styleguide</a> to see the visual look of all website components and typographic elements. </p>
+
+<p>Components are listed below in alphabetical order.</p>
+
+<hr />
+
+<figure>
+<img src="assets/accordion.jpg" alt="Accordion" />
+<figcaption>Accordion</figcaption>
+</figure>
+
+<h4>Accordion</h4>
+
+<p>Use the accordion component to create question and answer or FAQ sections. This component can also be used for any text you want content to expand and collapse. </p>
+
+<hr />
+
+<h4>Billboards</h4>
+
+<p>Billboards — or “headers” — are built into the top area of certain content types, such as pages and events. Unlike other components, you won’t need to add billboards manually. Billboards may display an image, page title and call-to-action buttons. </p>
+
+<figure>
+<img src="assets/billboard_general2.png" alt="Billboard General" />
+<figcaption>Billboard General</figcaption>
+</figure>
+
+<figure>
+<img src="assets/billboard_profile_2.png" alt="Billboard Profile" />
+<figcaption>Billboard Profile</figcaption>
+</figure>
+
+<figure>
+<img src="assets/billboard_events.png" alt="Billboard Events" />
+<figcaption>Billboard Events</figcaption>
+</figure>
+
+<hr />
+
+<h4>Calls to Action / CTAs</h4>
+
+<p>Calls-to-action are available throughout the site. (CTAs are similar to the buttons on the old Guilford site.)</p>
+
+<p>There are two types:</p>
+
+<ul>
+<li><p>CTA buttons on headers and teasers</p></li>
+<li><p>CTA cards</p></li>
+</ul>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Use CTAs to inform users of the thing you want them to do next or learn more about.</li>
+<li>Use CTAs contextually. For example, place an Apply CTA on a program page since that’s the likely next action users would want to take.</li>
+<li>Do not overuse CTAs on a page or other content. If there are too many, they won&#8217;t stand out as important.</li>
+</ul>
+
+<hr />
+
+<figure>
+<img src="assets/factoid_block.png" alt="Factoid Block" />
+<figcaption>Factoid Block</figcaption>
+</figure>
+
+<h4>Factoid</h4>
+
+<p>Use the factoid component to highlight key facts about the College, a program or another topic relevant to the page. Include a short title — preferably one that in includes a number — and a longer description. Factoids do not include links.</p>
+
+<hr />
+
+<figure>
+<img src="assets/feed.png" alt="Example of Social Feed and News &amp; Event" />
+<figcaption>Example of Social Feed and News &amp; Event</figcaption>
+</figure>
+
+<h4>Feeds</h4>
+
+<p>Feeds are used to automatically pull information into special sections on pages. There are two kinds of feeds: News &amp; Events and Social.</p>
+
+<hr />
+
+<h4>News &amp; Events Feed</h4>
+
+<p>The news &amp; event feed pulls news articles and events from Drupal and arranges them into a grid on the page. Choose from predefined categories to dictate what kind of news and events display.</p>
+
+<hr />
+
+<h4>Social Feed</h4>
+
+<p>Social posts can be pulled from accounts in Facebook, Twitter and Instagram. Follow the instructions to add accounts to the feed for each page.</p>
+
+<hr />
+
+<h4>Horizontal Rule</h4>
+
+<p>Insert a horizontal rule to separate sections on a page. Rules can be the same width of the content or the full-width of the browsers.</p>
+
+<hr />
+
+<h4>Images</h4>
+
+<p>Two types of stand-alone images can be added to the page: content-width and screen-width. Content-width images include a caption or description. See the Image Specification section below for details.</p>
+
+<hr />
+
+<figure>
+<img src="assets/quote2.png" alt="Quotes" />
+<figcaption>Quotes</figcaption>
+</figure>
+
+<h4>Quote</h4>
+
+<p>Use the quote component to call out a brief quote by a student, professor, or other community member. </p>
+
+<h4>Tip</h4>
+
+<ul>
+<li>You can call out quotations within the rich text component, too.</li>
+</ul>
+
+<hr />
+
+<h4>Rich Text</h4>
+
+<figure>
+<img src="assets/rich_text_front.png" alt="Rich text with images" />
+<figcaption>Rich text with images</figcaption>
+</figure>
+
+<p>Rich text — or “body copy” — is useful when you need to present longer passages of text. The rich text component allows formatting such as heading styles to give your text hierarchy, making it easier for readers to follow. Bulleted lists, italics and bolding are also available. Use links embedded in the text to link to other pages, external sites, or documents like PDFs uploaded as media into Drupal.</p>
+
+<figure>
+<img src="assets/rich_text_front2.png" alt="Rich text being used with a quote" />
+<figcaption>Rich text being used with a quote</figcaption>
+</figure>
+
+<p>Media (images, image galleries, videos, profiles) can also be added to rich text. They will be inserted to the left or right, and your text will flow around it.</p>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Use heading styles to structure your text. See below for reasons why and how to do it.</li>
+<li>Be purposeful in using formatting tools such as bold and italics. They should add meaning rather than decoration.</li>
+<li>Each rich text component can take one piece of media. If you want more than one piece of media to accompany a particular section of text, break the text into more than one rich text component.</li>
+</ul>
+
+<hr />
+
+<h4>Heading Styles</h4>
+
+<figure>
+<img src="assets/rich_text_header.png" alt="Annotated image of page with heading styles" />
+<figcaption>Annotated image of page with heading styles</figcaption>
+</figure>
+
+<p>When entering content into the rich text component you can use heading styles to format headings and subheadings for sections and paragraphs. Heading styles adjust the style of text and headings automatically so they remain consistent. </p>
+
+<p>IMPORTANT: Do not use bold for headings and subheadings. Only use bold for emphasizing words or phrases in a sentence of body copy.</p>
+
+<p>Headings are necessary because they: </p>
+
+<ul>
+<li>Give hierarchical structure and order to your information, making it more useful to users.</li>
+<li>Are essential for accessibility; visitors using a screen reader need headings to understand the order of information.</li>
+<li>Are important for SEO (search engine optimization).</li>
+</ul>
+
+<hr />
+
+<h4>How to Add Headings</h4>
+
+<ol>
+<li>Highlight the text you want to make a heading.</li>
+<li>Click the Format button and select the heading style you want to use. Note: The title of the page is a Heading 1 so you will want to use a Heading 2, 3 or 4 depending on if there is an intro teaser or other heading in another component already on the page. Be consistent with your heading styles across pages in a section of the site or tabs on content types like programs and departments.</li>
+</ol>
+
+<hr />
+
+<h4>Smart Blocks</h4>
+
+<p>The smart block component is available on the page content type. Smart blocks have the same fields as other common teaser blocks but look very different in design. </p>
+
+<hr />
+
+<h4>Stacks</h4>
+
+<figure>
+<img src="assets/stack_cards.png" alt="Sample of Card Types" />
+<figcaption>Sample of Card Types</figcaption>
+</figure>
+
+<p>Stacks are groupings of cards of different types — e.g., profile, video, gallery. Stacks are a good way to call attention to content that is relevant to the page the user is on. </p>
+
+<p>How to add a stack:</p>
+
+<ol>
+<li><p>Choose where you want to place a stack.</p></li>
+<li><p>Add cards one at a time.</p></li>
+<li><p>Fill in the content for each card.</p></li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>If there’s important information you want users to see in a stack, set the card that contains that information to be a featured card.</li>
+<li>Use a variety of card types when creating a stack.</li>
+<li>By design, there is no maximum for the number of cards you may place in a stack. While there is not a required minimum, aim for at least three cards.</li>
+</ul>
+
+<hr />
+
+<h4>Tables</h4>
+
+<figure>
+<img src="assets/table.png" alt="Table Example" />
+<figcaption>Table Example</figcaption>
+</figure>
+
+<p>The table component is for adding tabular data to a page. Please note that the table should only be used for numerical-type information and not for organizing paragraphs; use tables for structured information.</p>
+
+<h5>EXAMPLES</h5>
+
+<ul>
+<li>Do: use a table to show the tuition for degree programs for the upcoming academic year.</li>
+<li>Don’t: use tables to list descriptions of different types of programs or organizations.</li>
+</ul>
+
+<hr />
+
+<h4>How to Add a Table</h4>
+
+<p>It’s a good idea to put your table in context with a title and any explanatory copy that will help users understand it. You can do that with the rich text component or an intro teaser.</p>
+
+<p>Once you have added that text:</p>
+
+<ol>
+<li>Choose Table from the component list.</li>
+<li>Enter the number of rows and columns you’ll need. You can adjust this if you need to.</li>
+<li>Enter the data into the table.</li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Use the rich text component (or an intro teaser) to hold explanatory copy related to the table.</li>
+<li>If you use column headers, make sure to have them on each column so the table displays properly on mobile.</li>
+<li>Don&#8217;t use footnotes in the table or descriptive copy about the data. That info should be in the rich text or other component.</li>
+<li>Tables can also be added inside the rich text component.</li>
+</ul>
+
+<hr />
+
+<h4>Teasers</h4>
+
+<figure>
+<img src="assets/teasers.png" alt="Sampling of Teasers" />
+<figcaption>Sampling of Teasers</figcaption>
+</figure>
+
+<p>Teasers are groupings of design elements that typically include an image or video, title, subtitle, and text. Some also include a call-to-action button. </p>
+
+<p>There are several types of teasers, and you can use them in a variety of combinations. For example, create a five piece teaser unit by stacking a feature teaser above four teaser blocks.</p>
+
+<h5>TIP</h5>
+
+<ul>
+<li>Use teasers to organize page content into easy to scan areas rather than walls of text.</li>
+</ul>
+
+<hr />
+
+<figure>
+<img src="assets/teaser_intro.png" alt="Intro Teaser" />
+<figcaption>Intro Teaser</figcaption>
+</figure>
+
+<h4>Intro Teaser</h4>
+
+<p>Includes a title, subtitle and area for intro text. CTA buttons can be included as well. Use for introducing a page or section on a page. Combines well with the rich text component.</p>
+
+<hr />
+
+<figure>
+<img src="assets/teaser_feature.png" alt="Feature Teaser" />
+<figcaption>Feature Teaser</figcaption>
+</figure>
+
+<h4>Feature Teaser</h4>
+
+<p>Includes a title, subtitle, area for text, and spot for media (image, video or gallery). A CTA can be included as well. Works well as a stand-alone feature on a page to highlight a topic with media.</p>
+
+<hr />
+
+<figure>
+<img src="assets/teaser_block.png" alt="Teasers Block" />
+<figcaption>Teasers Block</figcaption>
+</figure>
+
+<h4>Teasers</h4>
+
+<p>Allows for up to four blocks that each include a title, short description, media and CTA. Use it to summarize a topic and lead users to more information. </p>
+
+<hr />
+
+<h2 id="section-personalization">Personalization</h2>
+
+<hr />
+
+<p>The Guilford website includes a suite of very powerful personalization features. Used to their fullest, these features will make the website feel relevant and friendly for all types of visitors. Personalization also places Guilford College’s website on the leading edge of higher education sites.</p>
+
+<hr />
+
+<figure>
+<img src="assets/notes.png" alt="Guilford Notes" />
+<figcaption>Guilford Notes</figcaption>
+</figure>
+
+<h4>Guilford Notes</h4>
+
+<p>With Guilford Notes users can easily save pieces of content — sentences, even — and whole pages to their own digital notebook, and then return later to view the content again. </p>
+
+<hr />
+
+<figure>
+<img src="assets/friendly_tips.png" alt="Friendly Tips" />
+<figcaption>Friendly Tips</figcaption>
+</figure>
+
+<h4>Friendly Tips</h4>
+
+<p>Friendly Tips are quick pieces of content (text, quotations, images) that can be added to the following components: </p>
+
+<ul>
+<li>Teasers</li>
+<li>Feature Teaser</li>
+<li>Intro Teaser</li>
+</ul>
+
+<p>Use tips to offer instructions or help to website users on or near a link or CTA. Tips are meant to be written as if a person is giving advice.</p>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Use one or two tips per page. Tips are considered special when used sparingly.</li>
+<li>Create friendly tips from students for student centered pages; and from parents for parents centered pages. Users like to receive advice from people with whom they can relate.</li>
+</ul>
+
+<hr />
+
+<h4>Audience Aware Content</h4>
+
+<p>The most ambitious — and unique — personalization feature allows Guilford to create and deploy audience-specific content on pages throughout the site. Basically, if you can programmatically identify a particular audience (i.e. set of users), then you can develop special, personalized content that only the target audience will see. Executing this feature well requires strategic content planning.</p>
+
+<hr />
+
+<h4>What can be personalized?</h4>
+
+<p>The Page content type can be personalized, while departments, programs, events, articles, and profiles cannot. On normal pages, the following components can be made audience aware: header, intro teaser, feature teaser, and images. </p>
+
+<hr />
+
+<h5>Audience Tags</h5>
+
+<p>We identify what type of user is viewing a page by reading what audience tags are in his or her browser. Users collect tags in three ways:</p>
+
+<ol>
+<li>By visiting pages on the site.</li>
+<li>When the site automatically identifies their location (based on his or her computer’s IP address).</li>
+<li>When users come in to the site from a specially created link (i.e. as part of a campaign).</li>
+</ol>
+
+<p>We have created three location segments into which we will sort all website visitors: </p>
+
+<ul>
+<li>In-state (inside North Carolina)</li>
+<li>Out-of-state (outside North Carolina; inside USA)</li>
+<li>International (outside of the USA)</li>
+</ul>
+
+<p>Additionally, all pages on the site will be tagged with one or more of the basic audiences groups we identified during our definition phase:</p>
+
+<ul>
+<li>Prospective Students</li>
+<li>Current Students</li>
+<li>Parents</li>
+<li>Alumni</li>
+</ul>
+
+<hr />
+
+<h5>Displaying the Right Content</h5>
+
+<p>Once an audience is defined, you can create content for it using the Audience Based Content component. You will need to write a default version of the component, along with any personalized versions. Site visitors who do not belong to one of your targeted audiences will see the default content. Follow the steps below:</p>
+
+<ol>
+<li>Choose “Add — Audience Based Content” from the bottom of the edit screen.</li>
+<li>Select which kind of content you will be personalizing by clicking on one of the content type buttons under the “Content Block Default” header. Fill in the content here. This will be the content that appears when no personalized content is being shown.</li>
+<li>Click “Add — Content Block Version” to add a personalized version of the content block you just created.</li>
+<li>Use the “Audience” field to choose from the predefined audience types. This determines which audience will see the content in this version.</li>
+<li>Click a button to choose the same content type as the default version above. Fill in the content block.</li>
+<li>Be sure to save your work.</li>
+</ol>
+
+<h6>TIPS</h6>
+
+<ul>
+<li>Target the most valuable audience segments. Don’t spend time creating custom content for relatively unimportant audiences.</li>
+<li>A single page can have more than one audience aware component.</li>
+</ul>
+
+<hr />
+
+<h2 id="section-imagespecs">Image Specifications</h2>
+
+<hr />
+
+<p>Minimal preparation is required when uploading images. For example, cropping is not necessary. </p>
+
+<p>The site will automatically crop the image to fit the design and the screen size the user is visiting the site on. To ensure that auto cropping doesn’t cut off an important part of an image, you can select a focal point when uploading the image. The focal point won’t be cut off when an image needs to be cropped for viewing on smaller screens.</p>
+
+<figure>
+<img src="assets/focal_point.png" alt="Image thumbnail with focal point" />
+<figcaption>Image thumbnail with focal point</figcaption>
+</figure>
+
+<p>While you do not need to crop images before uploading, you should follow these size and aspect ratio guides. Please note that the sizes listed below are in a 2x format and will provide the best quality on devices with high resolution screens.</p>
+
+<hr />
+
+<h4>Home Feature &amp; General Headers</h4>
+
+<p>Feature/header images are displayed at the top of page templates as part of the feature/billboard components. </p>
+
+<p><em>Recommended Image Size:</em> <strong>3840 px x 2160 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>16:9</strong> </p>
+
+<figure>
+<img src="assets/billboard_general.png" alt="Home Feature" />
+<figcaption>Home Feature</figcaption>
+</figure>
+
+<hr />
+
+<h4>Profiles</h4>
+
+<p>Profile images are shown in both the faculty &amp; staff directory as well as at the top of individual profiles.</p>
+
+<p><em>Recommended Image Size:</em> <strong>600 px x 600 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>1:1</strong> </p>
+
+<figure>
+<img src="assets/billboard_profile.png" alt="Profile Header" />
+<figcaption>Profile Header</figcaption>
+</figure>
+
+<figure>
+<img src="assets/directory.png" alt="Directory" />
+<figcaption>Directory</figcaption>
+</figure>
+
+<hr />
+
+<h4>Stack</h4>
+
+<p>A stack is used to display profile, gallery or video cards on the page template. The image specifications below are appropriate for any of these cards regardless of the content type.</p>
+
+<p><em>Recommended Image Size:</em> <strong>1000 px x 560 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>16:9</strong> </p>
+
+<figure>
+<img src="assets/stack_cards.png" alt="Stack Cards include Profile, Video, and Gallery" />
+<figcaption>Stack Cards include Profile, Video, and Gallery</figcaption>
+</figure>
+
+<hr />
+
+<h4>News and Event Feeds</h4>
+
+<p>These are the specs for all card types used in the news or event feeds.</p>
+
+<p><em>Recommended Image Size:</em> <strong>1920 px x 1080 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>16:9</strong> </p>
+
+<figure>
+<img src="assets/news_story_event_cards.png" alt="News and Event Feed" />
+<figcaption>News and Event Feed</figcaption>
+</figure>
+
+<hr />
+
+<h4>Smart Block</h4>
+
+<p>Smart Block are interactive cards that include icons/graphics.</p>
+
+<p><em>Recommended Image Size:</em> <strong>1920 px x 1080 px</strong></p>
+
+<p><em>Recommended Image Ratio:</em> <strong>16:9</strong></p>
+
+<figure>
+<img src="assets/smart_blocks.png" alt="CTA blocks" />
+<figcaption>CTA blocks</figcaption>
+</figure>
+
+<hr />
+
+<h4>Teasers</h4>
+
+<p>These are the specs for all teaser types: feature and smart teasers.</p>
+
+<p><em>Recommended Image Size:</em> <strong>975 px x 548 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>16:9</strong> </p>
+
+<figure>
+<img src="assets/teaser_smart.png" alt="Smart teaser with three blocks" />
+<figcaption>Smart teaser with three blocks</figcaption>
+</figure>
+
+<figure>
+<img src="assets/teaser_feature.png" alt="Feature Teaser" />
+<figcaption>Feature Teaser</figcaption>
+</figure>
+
+<hr />
+
+<h4>General Images</h4>
+
+<p>When using an image on its own (i.e. not in a teaser or card) on a page or other content type, follow these specifications. Note that images can be entered as full-width, full-width with parallax effect or content width. </p>
+
+<p><em>Recommended Image Size:</em> <strong>3840 px x 2160 px</strong><br/>
+<em>Recommended Image Ratio:</em> <strong>16:9</strong> </p>
+
+<figure>
+<img src="assets/images.png" alt="Full-width and content-width images" />
+<figcaption>Full-width and content-width images</figcaption>
+</figure>
+
+<hr />
+
+<h4>About Parallax</h4>
+
+<p>With parallax, images are arranged in the background, with section content overlaying it so content moves on top of the image as the user scrolls. To use this effect, set layout to “full” when adding your image.</p>
+
+<hr />
+
+<h2 id="section-wordcounts">Word Counts</h2>
+
+<p>Most components have a recommended word count to ensure that text fits properly. </p>
+
+<hr />
+
+<h3>Accordion</h3>
+
+<p>Question: 10 - 15 words
+Answer: No limit. But follow standard web writing practices. Be brief.</p>
+
+<hr />
+
+<h3>Factoid Blocks</h3>
+
+<p>Title: 5 - 8 words
+Subhead: 20 - 30 words</p>
+
+<hr />
+
+<h3>Rich Text/Body Copy</h3>
+
+<p>There isn’t a limit to the number of words you can use for rich text or other text that would be considered “body copy” for things like bios, articles, etc.</p>
+
+<p>However, keep in mind that online readers scan more than read. This means that breaking text into chunks with headings will greatly help your audience find relevant information. Also, keep sentences short (20 to 25 words) and don’t be afraid to use single-sentence paragraphs. Newspapers are filled with them.</p>
+
+<hr />
+
+<h3>Smart Container</h3>
+
+<p>Title: 8 - 10 words
+Subhead: 5 - 10 words
+Description: 10 &#8211;15 words</p>
+
+<hr />
+
+<h3>Teasers</h3>
+
+<hr />
+
+<h4>Intro Teaser</h4>
+
+<p>Title: 5 - 10 words
+Description: 15 - 25 words</p>
+
+<h4>Feature Teaser</h4>
+
+<p>Title: 5 - 10 words
+Subhead: 10 - 15 words
+Text: 20 - 30 words</p>
+
+<h4>Teaser Blocks</h4>
+
+<h5>If Using 2 Blocks</h5>
+
+<p>Title: 10 - 15 words
+Text: 15 - 20 words</p>
+
+<h5>If Using 3 Blocks</h5>
+
+<p>Title: 5 - 10 words
+Text: 15 - 20 words</p>
+
+<h5>If Using 4 Blocks</h5>
+
+<p>Title: 8 - 10 words
+Text: 15 - 20 words</p>
+
+<hr />
+
+<h2 id="section-login">Logging Into the Site</h2>
+
+<p>To manage content, including your profile, to http://guilford.edu/user and enter your username and password. You can also use your CAS account. </p>
+
+<hr />
+
+<h2 id="section-createandedit">Creating and Editing Content</h2>
+
+<p>The types of content and specific pages you have access to create and edit on the site is determined by things like your role — staff or faculty, for example — and how much writing and editing for the site is part of your job responsibilities. </p>
+
+<hr />
+
+<h3>Resources</h3>
+
+<p><a href="https://docs.google.com/document/d/1cHhD0tPKoLYSr0P3y8Sy1w1dLEIwoV3ozuo6i0ybEaM/edit?usp=sharing">Writing for the Web Editorial Style Guide</a></p>
+
+<p>All content you create or edit for the website (regardless of your particular role) should follow the guidelines and tips in this editorial style guide. It is important to be familiar with what this document says about guilford.edu’s goals, audience, voice, copy style, and other topics before working on content for the website.</p>
+
+<p><a href="https://drive.google.com/file/d/0BxctGGMAZuqfUnNaUGJvaktVODQ/view?usp=sharing">User Personas </a></p>
+
+<p>Website writers and editors should also familiarize themselves with the user personas developed for the website. Have in mind these three fictional users when creating content. Does the material speak to one or more of them? Is your copy’s message something they would be interested in? Is your writing style — i.e. the words you use, your sentence structure — compatible with this audience?</p>
+
+<hr />
+
+<h3>Workbench</h3>
+
+<p>If you have access to edit or create content on the site you will see an area called Workbench when you log in. This is where you will go to do any content-related activities on the site. For example, find content you created and want to edit or create new content.</p>
+
+<p>The Workbench menu contains different items depending on a person’s role. For example, members of the marketing department will see different items than other departments.</p>
+
+<hr />
+
+<h3>Review and Publishing</h3>
+
+<p>There is an editorial review process that determines which content can be published immediately when you create or edit it, and which will be reviewed and published or return for additional edits. In the saving options, if you see the option to Save and Publish, your content will be published without review.</p>
+
+<hr />
+
+<h3 id="section-generalsteps">How To Create or Edit Content</h3>
+
+<p>Below is a simple overview of how to create and edit content. The sections that follow in this guide contain more detailed instructions and tips for specific content types.</p>
+
+<h5>TIP</h5>
+
+<ul>
+<li>Creating and editing content is similar to completing a form. What appears to site visitors on a page, for example, are the fields you fill out.</li>
+</ul>
+
+<hr />
+
+<h4>Create Content</h4>
+
+<ol>
+<li>In the upper navigation menu bar, go to Content &gt; Add Content</li>
+<li>Select the type of content you want to create.</li>
+<li>Complete the form.
+ <img src="assets/content_menu.png" alt="Content Menu" /></li>
+<li>Find the Save button at the bottom of the screen and select the desired save option.</li>
+</ol>
+
+<h5>TIP</h5>
+
+<ul>
+<li>Most content types have tabs that correspond to the different parts of the content. For example, the header is the top of a page and includes the image and call-to-action buttons. Make sure to click on each tab to ensure that you are including the necessary information.</li>
+</ul>
+
+<blockquote>
+<p><strong>NOTE</strong>
+Depending on your editing permissions, you will see different save options. For example, you may be able to publish immediately, or your content might be sent to an editor for review. </p>
+</blockquote>
+
+<hr />
+
+<h4>How to Edit Content</h4>
+
+<ol>
+<li>In the upper navigation menu, select Content.</li>
+<li>From the index page select the page, program, event, etc. that you want to edit.</li>
+<li>At the top of the page, you will see options for Edit Draft or New Draft. Click whichever option appears.</li>
+<li>Edit the text, images or other information as needed.</li>
+<li>Find the Save button at the bottom of the screen and select the desired save option.</li>
+</ol>
+
+<blockquote>
+<p><strong>NOTE</strong>
+Depending on your editing permissions on the site and the type of content you are editing your changes might be reviewed by an editor or published immediately.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="section-pages">Pages</h4>
+
+<p>Pages are the most common content type. Follow these <a href="#section-generalsteps">general steps</a> to create or edit a page. Keep these instructions and tips in mind:</p>
+
+<hr />
+
+<h4>Adding Page Content</h4>
+
+<figure>
+<img src="assets/content_page.png" alt="Content tab of page content type" />
+<figcaption>Content tab of page content type</figcaption>
+</figure>
+
+<ol>
+<li><p>Go to the content tab on a page you want to edit. </p></li>
+<li><p>Scroll to the bottom, and you will see an array of buttons representing the available components. </p></li>
+<li><p>Click on the one that would best fit the content you want to add.</p></li>
+<li><p>Enter your content into the fields. </p></li>
+<li><p>Save your additions or continue to add components and then save.</p></li>
+</ol>
+
+<p><a href="#section-components">More about components</a> </p>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>You can add as many or as few components as needed to accommodate the content you want to present to site visitors. Keep in mind that the information, images, etc. on the page shouldn’t feel too sparse or too dense.</li>
+<li>To reorder components, use the crosshair symbol to drag and drop.</li>
+<li>When writing text for call-to-action buttons or links, use descriptive, active words that make it clear where users will go when they click/touch it. For example, “explore majors” rather than “click here.”</li>
+</ul>
+
+<hr />
+
+<h4>Adding Personalized Content</h4>
+
+<figure>
+<img src="assets/content_page.png" alt="Content tab of page content type" />
+<figcaption>Content tab of page content type</figcaption>
+</figure>
+
+<ol>
+<li><p>Go to the content tab on a page you want to edit. </p></li>
+<li><p>Scroll to the bottom, and you will see an array of boxes representing the available content component types. </p></li>
+<li><p>Click the Audience Based Content button. Inside this component, choose which kind of component you would like to personalize. </p></li>
+<li><p>Fill in the fields to create a default version of the component. </p></li>
+<li><p>Click Content Block Version to create a personalized version of the component.</p></li>
+<li><p>Fill in the audience and all content fields inside the personalized version of the component.</p></li>
+<li><p>Add as many different versions as you want — each with its own audience and content.</p></li>
+<li><p>Save your additions.</p></li>
+</ol>
+
+<p><a href="#section-personalization">More about personalization</a> </p>
+
+<hr />
+
+<h4>Editing Page Content</h4>
+
+<ol>
+<li>Go to the content tab of the page you want to edit.</li>
+<li>Find the component you want to edit and select Edit.</li>
+<li>Make your changes.</li>
+<li>Scroll to the bottom of the page and save your changes.</li>
+</ol>
+
+<hr />
+
+<h4>Adding a Page to a Menu</h4>
+
+<figure>
+<img src="assets/menu_settings.png" alt="Menu Settings" />
+<figcaption>Menu Settings</figcaption>
+</figure>
+
+<ol>
+<li><p>Open the menu settings box. If you are on a desktop computer, it should be on the right side of your screen.</p></li>
+<li><p>Tick the box that says “Provide a menu link”</p></li>
+<li><p>Enter a menu title. This is what will appear in a menu. It should be short (no more than 3 words) and clear.</p></li>
+<li><p>Under Parent item, select the section the page should appear under. </p></li>
+<li><p>Save the page.</p></li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>To ensure clear menu titles, avoid acronyms or other insider terms.</li>
+<li>To move an item in a menu, refer to <a href="#section-reorder">these instructions.</a></li>
+</ul>
+
+<hr />
+
+<h4 id="section-programs">Programs</h4>
+
+<p>The program content type is primarily intended for presenting academic majors and minors to prospective students. It’s also used to provide information about hands-on learning opportunities and other academic- or career-focused programming offered by Guilford College.</p>
+
+<p>Follow these <a href="#section-generalsteps">general steps</a> to create or edit a program. Keep these instructions and tips in mind:</p>
+
+<hr />
+
+<h4>Adding Program Content</h4>
+
+<figure>
+<img src="assets/program_overview.png" alt="Program overview tab edit view and front end." />
+<figcaption>Program overview tab edit view and front end.</figcaption>
+</figure>
+
+<p>The main content for programs is organized by tabs. By default, every program has an overview tab that should provide a synopsis of the program in a compelling manner.</p>
+
+<ol>
+<li>Go to the Sections tab and enter the overview content. In addition to the body text, you can add images, teasers and other components within the overview section.</li>
+<li>Add new sections by selecting the Add - Tab Section button towards the bottom of the page.</li>
+<li>Fill in the fields on the new section.</li>
+<li>Save your additions.</li>
+</ol>
+
+<h5>TIP</h5>
+
+<ul>
+<li>Your program will automatically be added to the program finder where site visitors can browse all Guilford programs.</li>
+</ul>
+
+<hr />
+
+<h5>Editing Program Finder Content</h5>
+
+<ol>
+<li>Select the Program Finder Content tab.</li>
+<li>Follow the instructions below the fields.</li>
+<li>Save your changes.</li>
+</ol>
+
+<hr />
+
+<h5>Categorizing a Program</h5>
+
+<p>The categorization section of a program is where you enter details about the program that are used in such things as the program finder where visitors browse majors and minors, graduate programs, etc.</p>
+
+<ol>
+<li>Select the Categorization tab.</li>
+<li>Use the fields to categorize the program and name its degree and department.</li>
+<li>If a program belongs to more than one category — for example, both major and minor — use the “Add another item” button to add a category.</li>
+<li>Save your changes.</li>
+</ol>
+
+<hr />
+
+<h4 id="section-profile">Your Profile</h4>
+
+<p><img src="assets/profile.png" alt="Username on CMS menu bar." />
+Members of Guilford College’s faculty and staff have profiles on the website. Follow these steps to manage yours:</p>
+
+<ol>
+<li><p>Go to http://guilford.edu/user and log into the site using your Guilford College network account. This is the same username and password you use for your email, e.g., username@guilford.edu.</p></li>
+<li><p>On the top left of the screen you’ll see your username. Click it, then click Edit profile.</p></li>
+<li><p>Click on Main Profile. Use the the subtabs — Basic Info, Bio, Ways to Connect, etc. — to see fields where you can enter or modify your contact details, short biography and other information.</p></li>
+<li><p>After you’ve made your entries or edits, go to the bottom of the screen and click Save.</p></li>
+</ol>
+
+<h5>Faculty Members</h5>
+
+<p>In addition to your main profile, there is academic-related information (e.g. areas of interests) that you can provide/edit. To do so, go to Faculty Profile (the tab to the right of Main Profile), enter or edit your information and click Save</p>
+
+<hr />
+
+<h4 id="section-article">Articles</h4>
+
+<p>With the article content type you can create a traditional news-style article, a press release or a press mention. There is also an option to create a story. Stories are less time-sensitive, or “evergreen” content. Examples include a feature profile of a member of the Guilford community.</p>
+
+<hr />
+
+<h5>How to Create Articles</h5>
+
+<p>Follow these <a href="#section-generalsteps">general steps</a> to create the type of article you want to add to the site. (Note: To select the type of article, use the type dropdown list.) Keep these instructions and tips in mind as you create your article:</p>
+
+<hr />
+
+<h4>Categorization</h4>
+
+<p>This is the area where you will enter information about the topics the article covers. Adding this information helps the article appear in the proper section of the site. </p>
+
+<p>Use the Categories section to:</p>
+
+<blockquote>
+<p>Enter broad topics the article relates to as well as the program/department it might feature. For example, undergraduate, graduate, academics, service learning, student life, journalism.</p>
+
+<p>Note: The items that you will be able to enter in this section are pre-defined, meaning that they are from a list managed by site administrators. </p>
+</blockquote>
+
+<p>Use the Tags section to:</p>
+
+<blockquote>
+<p>Add more specific topics the article covers. For example, a person, a special award.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="section-events">Events</h4>
+
+<p>Older events will be pulled into the site from the current Guilford event calendar. Follow these <a href="#section-generalsteps">general steps</a> to create the type of event you want to add to the site. Think carefully when choosing Event Type and Content Categories. These will determine where this event is displayed on the site.</p>
+
+<hr />
+
+<h4 id="section-departments">Departments</h4>
+
+<p>The department content type provides a standardized way for departments to present their work, faculty members, academic programs and more.</p>
+
+<p>Follow these <a href="#section-generalsteps">general steps</a> to create or edit a department. Keep these instructions and tips in mind:</p>
+
+<hr />
+
+<h4>Adding Department Content</h4>
+
+<p>The main content for departments is organized by tabs. By default, every department has an overview tab that should provide a summary of the department’s activities, offerings, etc.</p>
+
+<p>To add a department overview:</p>
+
+<ol>
+<li>Go to the Sections tab and enter the overview content.</li>
+<li>At the bottom of the screen, select a save option to save your work.</li>
+</ol>
+
+<p>To create tabs:</p>
+
+<ol>
+<li>Go to the Section tab and select Add - Tab Section.</li>
+<li>Type in a title for the tab and select an icon that matches the type of component you want to add.</li>
+<li>Save your additions or continue to build the department by adding tabs and then save.</li>
+</ol>
+
+<hr />
+
+<h4 id="section-videosandgalleries">Videos and Photo Galleries</h4>
+
+<p>To place videos and photo galleries into an area of the site, the first step is to create the video or gallery. Follow <a href="#section-generalsteps">these steps</a> to create a video or a gallery, then follow the steps below to embed it.</p>
+
+<p>To add a video or gallery to a page:</p>
+
+<ol>
+<li><p>Add a feature teaser, teaser block or stack to a page.</p></li>
+<li><p>Click the button representing the media button you want (gallery, image or video).</p></li>
+<li><p>Start typing the title of the video or gallery and then select the one you want to add from the list.</p></li>
+</ol>
+
+<hr />
+
+<h4 id="section-documents">PDFs and Documents</h4>
+
+<p>You can add PDFs and other documents to certain content types, such as pages. </p>
+
+<p>Document types that can be uploaded:</p>
+
+<blockquote>
+<p>Word</p>
+
+<p>PDF</p>
+
+<p>Powerpoint</p>
+
+<p>Excel </p>
+
+<p>Plain Text</p>
+</blockquote>
+
+<p>To add a document, follow these steps: </p>
+
+<ol>
+<li>Go to the documents tab.</li>
+<li>Choose the file.</li>
+<li>Click the select files button to finish the upload.</li>
+<li>Open to view the file you just uploaded by clicking on its title.</li>
+<li>Copy the URL.</li>
+<li>Copy and use this url to reference this file elsewhere on the site.</li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Use the name or subject of the file as your link text:</li>
+<li>Good: Undergraduate Research Magazine</li>
+<li>Bad: click here</li>
+<li>Documents added to pages are added to the Drupal system globally and are thus available to be used with any other content on the site. Documents can also be added by choosing from the top Drupal navigation Content &gt; Media &gt; Add new media.</li>
+</ul>
+
+<hr />
+
+<h4 id="section-links">Links</h4>
+
+<p><img src="assets/links.png" alt="Link plus icon in wisywig." />
+To create a link to a page on the site or an external website:</p>
+
+<ol>
+<li>Highlight the text you want to link and click on the link icon.</li>
+<li>Begin typing the name of the page or paste a URL.</li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>Write links as short, clear calls to action or descriptive text.</li>
+<li>Good: learn about the lecture.</li>
+<li>Bad: click here.</li>
+<li>Leave space between link phrases if there are more than one in a sentence, and use 2&#8211;4 words. It can be difficult for mobile users to click on single-word links if they’re near other links.</li>
+</ul>
+
+<hr />
+
+<h4 id="section-contentmaintenance">Content Maintenance</h4>
+
+<p>Keeping the content on guilford.edu fresh, accurate and current is an important aspect of maintaining the website. Consult the <a href="https://docs.google.com/document/d/1LCS2SfSROKH0phc3Fm2OA1pKFHORA76vX8O2hFfqBCA/edit">Guilford Website Content Maintenance Guidelines</a> for the content update plan.</p>
+
+<hr />
+
+<h2 id="section-advancedtopics">Advanced Topics</h2>
+
+<p>The following sections cover tasks and functionality that not all site users have access to. If you are interested in doing one of these tasks and do not have access to do so on the site, contact a site administrator.</p>
+
+<hr />
+
+<h4 id="section-alerts">Alerts</h4>
+
+<p><img src="assets/alert.png" alt="Alert Example" />
+Alerts allow you to quickly post a notice on the homepage, and set it to expire. They are color-coded so you can use them for things like on-campus emergencies or closings, updates about a resolved emergency, or things like reminders for applicants. </p>
+
+<p>Note: the ability to create alerts is limited to certain members of Guilford staff. Follow these <a href="#section-generalsteps">general steps</a> to create an alert. </p>
+
+<hr />
+
+<h4 id="section-eventregistration">Events with Registration</h4>
+
+<p>Events appear as cards on the site as well as in the main calendar. Events can be pulled in from the current Guilford calendar — e.g. visit days — or created in the CMS.</p>
+
+<p>Follow these <a href="#section-generalsteps">general steps</a> to create an event. (Not every user can create events.) To ensure that the event appears in the correct area of the site, make sure to complete the categorization tab of the event. If you want people to be able to register for the event, follow the instructions below. </p>
+
+<hr />
+
+<h4>Viewing Registrations</h4>
+
+<p>To see who has signed up for the event, go to the event and open the registration list tab.</p>
+
+<hr />
+
+<h4 id="section-managingmenus">Menus</h4>
+
+<p>Note: Not all users have access to manage menus. If you do not have access to the menu area described below and need a change made to a menu, <a href="https://cardinalnet.northcentralcollege.edu/misc/website-management">submit a request</a>.</p>
+
+<p>To manage the site’s menus, go to Structure or Shortcuts &gt; Menus. </p>
+
+<p>The most common task involving menus is reordering menu items.</p>
+
+<hr />
+
+<h4 id="section-reorder">Reordering Menu Items</h4>
+
+<ol>
+<li>Select Edit for the menu you want to change. Note: Main navigation is the site’s primary menu.</li>
+<li>Use the crosshair to drag and drop the menu item to a new location. You can move it within its sibling items, move it under a new parent, or to a new level.</li>
+<li>Select Save to keep your menu changes.</li>
+</ol>
+
+<hr />
+
+<h3 id="section-buildingwebforms">Webforms: Building and Managing</h3>
+
+<p>Depending on your access level on the site you can select pre-built form templates to add to an area of the site. Or you will have the ability to build a form template.</p>
+
+<hr />
+
+<h4>Create a Form from a Template</h4>
+
+<p>Follow these <a href="#section-generalsteps">general steps</a> to begin the form-creation process. Then follow these instructions and tips:</p>
+
+<hr />
+
+<h4>Provide Context</h4>
+
+<p>Use the Header &gt; Overview section to include a sentence or two introduction about what the form is for. In a friendly manner, include any special instructions or important information the person completing the form should know.</p>
+
+<hr />
+
+<h4>Selecting the Form Template</h4>
+
+<p>In the form tab begin entering the name of the form you want to use. </p>
+
+<hr />
+
+<h4>Build a Custom Form Template</h4>
+
+<p>The site uses the YAML webform module which comes with template-style forms for a variety of common form types, e.g., registration. These templates can be used as a starting point to create custom forms. If you need to create a custom form and have access to the Structure &gt; YAML Forms section of the CMS, follow the instructions below. If you do not have access to that section, contact a site administrator.</p>
+
+<p>To customize a form:</p>
+
+<ol>
+<li><p>Go to Structure or Shortcut &gt; YAML form</p></li>
+<li><p>Give the new form a title and description.</p></li>
+<li><p>Customize the form by editing or deleting fields and adding new elements/fields.</p></li>
+<li><p>Click Save elements to save the form. The form will now be available when using the Webform content type.</p></li>
+</ol>
+
+<h5>TIPS</h5>
+
+<ul>
+<li>To edit the confirmation message people see when they submit a form (a recommended step), go to the Settings tab of the form and edit the text in the confirmation settings box.</li>
+<li>To see the types of fields/elements you can use, view the example forms.</li>
+<li>The module supports emailing people who submit a form and other more advanced functionality. Learn more about <a href="http://yamlform.io/features/">YAML form features</a>.</li>
+</ul>
+
+<hr />
+
+<h4>Managing Submissions</h4>
+
+<p>To view, download or take other actions related to form submissions, go to the Results tab of a form.</p>
+
+<hr />
+
+<h4 id="section-eventmanagement">Event Management</h4>
+
+<p>The site uses the RNG module for managing event registration. <a href="https://www.drupal.org/project/rng">Learn more about the module</a>.</p>
+
+<hr />
+
+<h4 id="section-taxonomies">Taxonomies</h4>
+
+<p>Taxonomies are used to manage things like the categories that programs appear under in the program finder. They are also used to manage categories for other types of content, such as articles and event types.</p>
+
+<p>Taxonomies are also used to manage who can edit certain content on the site. The editorial sections taxonomy is one example.</p>
+
+<p>To manage taxonomies, go to Structure &gt; Taxonomy</p>
+
+<h5>TIP</h5>
+
+<ul>
+<li>If you want change the name of a term that is already used to categorize content, edit the term rather than delete and add a new term. This way you don’t have to retag the content with the updated term name.</li>
+</ul>
+
+<hr />
+
+<h4 id="section-editorialaccess">Editorial Access and Workflows</h4>
+
+<p>To control specific content (e.g. a particular page or program) a CMS user can edit, the site uses a module called Workbench and taxonomies. </p>
+
+<p>The primary taxonomy that’s used to manage editing access to content is the Editorial Sections taxonomy. That taxonomy allows for the creation of groups such as Marketing or Admissions. CMS users are assigned to the various editorial sections created.</p>
+
+<p>Certain content, such as pages, includes an editorial sections tab. In that tab you can select an editorial section. Users who are part of that editorial section can then edit the content, even if they did not originally create it. </p>
+
+<p>An example:
+The undergraduate academics page is tagged with the Marketing and Communications editorial section. Jane is a member of the Marketing and Communications editorial section. Jane can edit the undergraduate academics page even though she isn’t the original author.</p>
+
+<p>To manage the editorial section taxonomy, go to Structure &gt; Taxonomy</p>
+
+<p>To manage Workbench, go to Configuration &gt; Workflow</p>
+
+<hr />
+
+<h4>Workbench</h4>
+
+<p>The <a href="https://www.drupal.org/node/2121239">Workbench</a> module manages publishing workflows and revisions. </p>
+
+<p>Workbench can be configured to suit Guilford’s editorial needs. Some examples: When an admin creates a new page they can save and publish it immediately. When an editor creates a page and saves it, it is saved as a draft for review by an author who publishes it. When an editor wants to edit an existing page they create a new draft, save it, and an author publishes it or sends it back as a draft.</p>
+
+<p>To configure Workbench settings, go to Configuration &gt; Workflow</p>
+
+<hr />
+
+<h4 id="section-rolesandpermissions">Roles and Permissions</h4>
+
+<p>To control actions CMS users can take and the parts of the CMS they have access to, the site uses roles and permissions. </p>
+
+<p>A “role” is a type of user, e.g., administrator, author, editor. A “permission” is a task that can be completed, e.g., publish a program, delete a page. </p>
+
+<p>Users are allowed to perform tasks based on the role they are assigned. Roles can be assigned manually by administrators and automatically through the Guilford College data source used to authenticate users. Roles and permissions can be expanded and modified as needed. </p>
+
+<p>To manage roles, go to People &gt; Roles</p>
+
+<p>To manage permissions, go to People &gt; Permissions</p>
+
+<hr />
+
+<h4 id="section-metatags">Meta Tags/SEO</h4>
+
+<p>To include information like page descriptions that search engines use to match users’ search queries with web content, the site uses the Meta Tags module.</p>
+
+<p>To add a page description to a page or other piece of content, open the Meta Tags box (it will be on the right-hand side of the page if you’re on a desktop computer). Then enter the description.</p>
+
+<p>You can also manage what’s shown when site content is shared on social networks like Facebook using the Meta Tags module.</p>
+
+<p>The Meta Tags module includes many more ways to optimize content for search engines and social networks. Learn more about the <a href="https://www.drupal.org/project/metatag">Meta Tags module</a>.</p>
+
+<hr />
+
+<h4 id="section-managingfiles">Managing Images and Files</h4>
+
+<p>When adding an image or file to a piece of content, users have the option to select images and files previously uploaded to the site. This can help when images or files need to be used frequently or in multiple places.</p>
+
+<p>To manage the images and other files on the site, go to Content and open the Files tab.</p>
+
+<hr />
+
+<h2 id="section-glossary">Glossary</h2>
+
+<hr />
+
+<h5>Alternative Text</h5>
+
+<p>A very short description of an image. This description is read to site visitors with visual impairments who use screen readers. </p>
+
+<h5>Aspect Ratio</h5>
+
+<p>The ratio of the width to the height of an image.</p>
+
+<h5>Component</h5>
+
+<p>An element used to build content, primarily pages. E.g. a feature teaser. </p>
+
+<h5>Content Type</h5>
+
+<p>The types of content that comprise the site: page, program, event, webform, etc.</p>
+
+<h5>CTA/Call to Action</h5>
+
+<p>Clickable prompts that guide users to content or to complete an action (e.g. learn more, register, submit form). They are most often buttons.</p>
+
+<h5>Crosslink</h5>
+
+<p>A link that takes users from one page of the site to another.</p>
+
+<h5>Focal Point</h5>
+
+<p>A tool that lets CMS users indicate the most important part of an image so it isn’t cut off when an image is auto cropped to fit smaller screen sizes.</p>
+
+<h5>Metadata</h5>
+
+<p>Information about a piece of content. A common example is the “about this page” description in the Meta Tags section of a page.</p>
+
+<h5>Node</h5>
+
+<p>A piece of content on the site with a URL. Examples, the homepage, an article, a page.</p>
+
+<h5>Parallax</h5>
+
+<p>An effect on pages that arranges an image in the background with section content moving on top as the user scrolls. </p>
+
+<h5>Paths</h5>
+
+<p>The unique end portion of the URL for a piece of content. For instance, for a page whose full URL is http://guilford.edu/node/202, the path is node/202. </p>
+
+<h5>Responsive</h5>
+
+<p>The auto optimization of a site for multiple devices. For example, a page being just as usable on a smartphone as it is on a desktop.</p>
+
+<h5>Stack</h5>
+
+<p>A collection of cards that animates when a user interacts with it.</p>
+
+<h5>URL</h5>
+
+<p>The “address” of a piece of content. E.g. the URL for the homepage is http://guilford.edu</p>
+
+<h5>Workbench</h5>
+
+<p>Where CMS users create and manage content. It also controls the publishing workflow.</p>
+    </div>
+  </div> <!-- End wrapper -->
+</body>
+</html>
